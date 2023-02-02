@@ -1,38 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: "IntroScript";
+  src: url("./IntroScriptDemo-Medium.otf") format("opentype");
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.spline
+{
+  width: 600px;
+  height: 600px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-bar
+{
+  position: absolute;
+  height: 3em;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar button
+{
+  font-family: "Spline Sans", sans-serif;
+  color: #9a4abe;
+  background: none;
+  cursor: pointer;
+  margin: 0 4% 0 4%;
+  padding: 0;
+  border: none;
+  transition: 0.5s;
+}
+
+.nav-bar button:hover
+{
+  font-weight: 700;
+  color: #7a08af;
+}
+
+.bio
+{
+  height: 60vh;
+  width: 40%;
+  font-family: "IntroScript", script;
+  font-size: 3.5em;
+  color: #7a08af;
+  display: flex;
+  align-items: center;
+  margin-left: 0.5em;
+}
+
+.socials
+{
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  width: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+
+.socials .vert-line
+{
+  border-radius: 25px;
+  width: 2px;
+  height: 80%;
+  background: linear-gradient(#9a4abe, #7a08af);
+  margin-bottom: 1em;
+}
+
+.socials a
+{
+  margin-bottom: 0.2em;
+}
+
+.App-header {
+  background: linear-gradient(#D68FF8, #c85efa);
+  
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: right;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
